@@ -1,5 +1,5 @@
 
-### Explore Bike Share Data
+### Explore Bike Share Data using R Programing
 
 For this project, your goal is to ask and answer three questions about the available bikeshare data from Washington, Chicago, and New York.  This notebook can be submitted directly through the workspace when you are confident in your results.
 
@@ -212,9 +212,9 @@ total_users = sort(table(city$City))
 print(total_users)
 ```
 
-    
-          Chicago New York City    Washington 
-             8630         54770         89051 
+
+          Chicago New York City    Washington
+             8630         54770         89051
 
 
 
@@ -224,9 +224,9 @@ round((total_users / sum(total_users) * 100), digits = 2)
 ```
 
 
-    
-          Chicago New York City    Washington 
-             5.66         35.93         58.41 
+
+          Chicago New York City    Washington
+             5.66         35.93         58.41
 
 
 
@@ -238,7 +238,7 @@ library(ggplot2)
 ggplot(aes(x = City, y = Trip.Duration), data = city) +
   geom_bar(position = 'dodge', stat = "summary", width = 0.2, fun.y = "mean", fill= "deepskyblue4", colour="black") +
   ggtitle('The average travel time for users in different cities') +
-  labs(y = 'Average Trip Duration', x = 'City') 
+  labs(y = 'Average Trip Duration', x = 'City')
 
 ```
 
@@ -253,7 +253,7 @@ ggplot(aes(x = City, y = Trip.Duration), data = city) +
 ```R
 #table results
 
-results <- with(city, aggregate(list(Trip.Duration), by = list(City), 
+results <- with(city, aggregate(list(Trip.Duration), by = list(City),
                                    FUN = function(x) { mon.mean = mean(x, na.rm = TRUE) } ))
 
 colnames(results) <- c('City', 'Average.Trip.Duration')
@@ -291,9 +291,9 @@ total = sort(table(city$User.Type))
 print(total)
 ```
 
-    
-                 Customer Subscriber 
-           121      30754     121576 
+
+                 Customer Subscriber
+           121      30754     121576
 
 
 
@@ -303,9 +303,9 @@ percentage = round((total / length(city$User.Type) * 100), digits = 2)
 print (percentage)
 ```
 
-    
-                 Customer Subscriber 
-          0.08      20.17      79.75 
+
+                 Customer Subscriber
+          0.08      20.17      79.75
 
 
 
@@ -316,16 +316,16 @@ print(user_by_city)
 ```
 
     city$City: Chicago
-                 Customer Subscriber 
-             1       1746       6883 
-    ------------------------------------------------------------ 
+                 Customer Subscriber
+             1       1746       6883
+    ------------------------------------------------------------
     city$City: New York City
-                 Customer Subscriber 
-           119       5558      49093 
-    ------------------------------------------------------------ 
+                 Customer Subscriber
+           119       5558      49093
+    ------------------------------------------------------------
     city$City: Washington
-                 Customer Subscriber 
-             1      23450      65600 
+                 Customer Subscriber
+             1      23450      65600
 
 
 
@@ -388,13 +388,13 @@ city$Start.Time <- ymd_hms(city$Start.Time)
 city$End.Time <- ymd_hms(city$End.Time)
 ```
 
-    
+
     Attaching package: ‘lubridate’
-    
+
     The following object is masked from ‘package:base’:
-    
+
         date
-    
+
     Warning message:
     “ 1 failed to parse.”
 
@@ -511,7 +511,7 @@ ggplot(data = city) +
 
 > Congratulations!  You have reached the end of the Explore Bikeshare Data Project. You should be very proud of all you have accomplished!
 
-> **Tip**: Once you are satisfied with your work here, check over your report to make sure that it is satisfies all the areas of the [rubric](https://review.udacity.com/#!/rubrics/2508/view). 
+> **Tip**: Once you are satisfied with your work here, check over your report to make sure that it is satisfies all the areas of the [rubric](https://review.udacity.com/#!/rubrics/2508/view).
 
 
 ## Directions to Submit
