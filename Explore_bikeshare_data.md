@@ -522,6 +522,8 @@ ggplot(data = city) +
 
 > Once you've done this, you can submit your project by clicking on the "Submit Project" button in the lower right here. This will create and submit a zip file with this .ipynb doc and the .html or .pdf version you created. Congratulations!
 
+## Credit
+udacity
 
 ```R
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
