@@ -22,7 +22,7 @@ Udacity
 =======
 
 ### Explore Bike Share Data using R programming
-### April 2022
+## April 2022
 
 For this project, your goal is to ask and answer three questions about the available bikeshare data from Washington, Chicago, and New York.  This notebook can be submitted directly through the workspace when you are confident in your results.
 
@@ -548,4 +548,9 @@ ggplot(data = city) +
 ```R
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
 ```
+<<<<<<< HEAD
+>>>>>>> documentation
+=======
+
+# codes and instructions provided by Udacity for Programming with R course
 >>>>>>> documentation
