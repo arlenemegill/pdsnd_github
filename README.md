@@ -528,3 +528,5 @@ ggplot(data = city) +
 ```R
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
 ```
+
+# codes and instructions provided by Udacity for Programming with R course
