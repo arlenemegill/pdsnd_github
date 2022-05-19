@@ -5,7 +5,7 @@
 May 18, 2022.
 
 ### Project Title
-Explore Bikesahre Data
+Explore_bikeshare_data
 
 ### Description
 For this project, the goal is to ask and answer three questions about the available bikeshare data from Washington, Chicago, and New York using R programming. We will write code to both import and answer the questions using statistics.
